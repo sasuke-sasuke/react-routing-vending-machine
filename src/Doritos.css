@@ -1,0 +1,51 @@
+.Doritos {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 15px;
+}
+
+.Doritos-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    
+}
+
+.Doritos-heading, .Doritos-body {
+    color: white;
+}
+
+.Doritos-heading {
+    font-size: 1.5rem;
+}
+
+.Doritos-body {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.Doritos-buttons button {
+    border-radius: 10px;
+    background-color: rgb(255,25,25 );
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+
+.Doritos-back-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.Doritos-back-btn:hover {
+    text-decoration: underline;
+}

@@ -7,20 +7,29 @@ import {v4 as uuid} from 'uuid';
 const Snickers = () => {
     const [snickers, setSnickers] = useState(0);
     const [imgPosition, setImgPosition] = useState([]);
+    const [rotation, setRotation] = useState(0);
+
+    const randomRotate = () => {
+        const randNum = Math.floor(Math.random() * 360);
+        setRotation(randNum);
+    }
     
     const handleClick = (e) => { 
         e.preventDefault();
-        setSnickers(snickers + 1);  
+        setSnickers(snickers + 1);
+        randomRotate();  
 
         /** Takes care of the logic for generating snickers in random
          *  positiong and saves to state
          */
         const xPos = Math.floor(Math.random() * window.innerWidth);
         const yPos = Math.floor(Math.random() * window.innerHeight);
-
-        // const xPos = Math.floor(Math.random() * 100);
-        // const yPos = Math.floor(Math.random() * 100);
-        setImgPosition( [...imgPosition, { top: `${yPos}px`, left: `${xPos}px`, id: uuid() }] ); 
+        setImgPosition( [...imgPosition, 
+                        { 
+                            top: `${yPos}px`, 
+                            left: `${xPos}px`, 
+                            transform: `rotate(${rotation}deg) scale(1.25)`,
+                             id: uuid() }] ); 
     }
 
 
@@ -37,9 +46,16 @@ const Snickers = () => {
                 
             </section>
             <div className='Snickers-img-container'>
-            {imgPosition.map(({top, left, id}) => (
-                //<SnickersImg styles={{ transform: `translate(${top}, ${left})`}} />
-                <SnickersImg key={id} styles={{position: `absolute`, top: `${top}`, left: `${left}`}} />
+            {imgPosition.map(({top, left, transform, id}) => (
+                <SnickersImg key={id} styles={
+                    {
+                        position: `absolute`, 
+                        top: `${top}`, 
+                        left: `${left}`, 
+                        transform: `${transform}`
+                    }
+                } 
+                />
             ))}
             </div>
         </div>
