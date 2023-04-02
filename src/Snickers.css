@@ -1,4 +1,7 @@
-
+.Snickers {
+    min-width: 100vw;
+    min-height: 100vh;
+}
 .Snickers-section {
     background-color: rgba(0,0,0, 0.6) ;
     padding: 1rem;
@@ -8,6 +11,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
 }
 
 .Snickers-heading, .Snickers-body {
@@ -41,5 +45,10 @@
 
 .Snickers-back-btn:hover {
     text-decoration: underline;
+}
+
+.Snickers-img-container {
+    width: 100vw;
+    height: 100vh;
 }
 
