@@ -23,14 +23,17 @@ const McDouble = () => {
          <div className='McDouble'>
            {isEnough() ? <h3 className='McDouble-heading'>Congratulations! You've gained 8500 calories!</h3> 
            :    <div>
-                    <p>Count: {count}</p>
-                    <button onClick={handleClick}>Super Size Me!</button>
+                    <p className='McDouble-body'>Count: {count}</p>
+                    <button className='McDouble-btn' onClick={handleClick}>Super Size Me!</button>
                 </div>}
 
-            <Link to="/">Go Back</Link>
+            <Link className='McDouble-back-btn' to="/">Go Back</Link>
 
         </div>
-        <McDoubleImg styles={{width: `${width}px`, height: `${height}px`}} />
+        <div className='McDouble-img-container'>
+            <McDoubleImg styles={{width: `${width}px`, height: `${height}px`}} />
+        </div>
+        
        </>
     )
 

@@ -1,0 +1,53 @@
+.McDouble {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 15px;
+}
+
+.McDouble-img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    
+}
+
+.McDouble-heading, .McDouble-body {
+    color: white;
+}
+
+.McDouble-heading {
+    font-size: 1.5rem;
+}
+
+.McDouble-body {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.McDouble-btn {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255,25,25 );
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+
+.McDouble-back-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.McDouble-back-btn:hover {
+    text-decoration: underline;
+}
