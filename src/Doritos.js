@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
-import DoritosImg from './DortitosImg';
+import DoritosImg from './DoritosImg';
 import {v4 as uuid} from 'uuid';
 import './Doritos.css'
 
